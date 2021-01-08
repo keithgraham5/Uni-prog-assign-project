@@ -29,8 +29,8 @@ def make_request(base_url="https://rest.variantvalidator.org/VariantValidator/va
 # Use the function in example, where the key-worded variables are pre-populated
 vv_response = make_request()
 data = vv_response.json()
-#print(json.dumps(data, sort_keys=True, indent=4, separators=(',', ': ')))
-print(data.key())
+print(json.dumps(data, sort_keys=True, indent=4, separators=(',', ': ')))
+#print(data.key())
 #for loop the loop splits the dictionaty.items() into key and its value
 #for key, val in data.items():
 #    try:
