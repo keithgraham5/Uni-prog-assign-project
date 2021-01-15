@@ -32,9 +32,9 @@ data = vv_response.json()
 print(json.dumps(data, sort_keys=True, indent=4, separators=(',', ': ')))
 #print(data.key())
 #for loop the loop splits the dictionaty.items() into key and its value
-#for key, val in data.items():
-#    try:
-#        if "gene_symbol" in val.keys():
-#            print(val['gene_symbol'])
-#    except AttributeError:
-#        continue
+for key, val in data.items():
+    try:
+        if "gene_symbol" in val.keys():
+            print(val['gene_symbol'])
+    except AttributeError:
+        continue
