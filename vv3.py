@@ -25,16 +25,18 @@ def make_request(base_url="https://rest.variantvalidator.org/VariantValidator/va
     print("Querying VariantValidator API with URL: " + query)
     # Make the request and pass to a response object that the function returns
     response = requests.get(query)
-    return response
+    return response.
+
 # Use the function in example, where the key-worded variables are pre-populated
 vv_response = make_request()
 data = vv_response.json()
 print(json.dumps(data, sort_keys=True, indent=4, separators=(',', ': ')))
-#print(data.key())
-#for loop the loop splits the dictionaty.items() into key and its value
+print(data.key())
+print(data["gene_ids"]["omim_id"])
+for loop the loop splits the dictionaty.items() into key and its value
 for key, val in data.items():
     try:
-        if "gene_symbol" in val.keys():
-            print(val['gene_symbol'])
+        if "omim_id" in val.keys():
+            print(val['omim_id'])
     except AttributeError:
         continue
